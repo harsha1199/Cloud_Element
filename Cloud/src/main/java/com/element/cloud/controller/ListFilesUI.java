@@ -15,7 +15,7 @@ import com.element.cloud.bean.FileBean;
 @Controller
 public class ListFilesUI {
 
-	static String path = "/Cloud_Element/";
+	static String path = "D:\\home\\site\\Cloud_Element\\";
 	
 	@RequestMapping(value = "/listAll/UI")
 	public ModelAndView listAll(@RequestParam("dir") String dir1) {

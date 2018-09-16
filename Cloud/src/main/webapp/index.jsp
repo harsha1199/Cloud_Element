@@ -10,9 +10,9 @@
 <h2>Welcome to Cloud Element Software Engineer Assignment</h2>
 <br>
 <br>
-<h4><a href="/Cloud/listAll/UI?dir=">UI navigation</a></h4>
-<h4><a href="/Cloud/listAll?dir=">API to list all files & folders in current directory</a></h4>
-<h4><a href="/Cloud/download/File1.txt">API to download file (sample File1.txt)</a></h4>
-<h4><a href="/Cloud/uploadfile.jsp">API to upload file</a></h4>
+<h4><a href="/listAll/UI?dir=">UI navigation</a></h4>
+<h4><a href="/listAll?dir=">API to list all files & folders in current directory</a></h4>
+<h4><a href="/download/File1.txt">API to download file (sample File1.txt)</a></h4>
+<h4><a href="/uploadfile.jsp">API to upload file</a></h4>
 </body>
 </html>

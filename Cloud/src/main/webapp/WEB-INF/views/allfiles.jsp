@@ -27,10 +27,10 @@
 						<tr>
 							<td>${file.getFileName()}</td>
 							<td><c:if test="${file.isFile()}">
-									<a href="/Cloud/download/${file.getFileName()}">download</a>
+									<a href="/download/${file.getFileName()}">download</a>
 								</c:if>
 								 <c:if test="${not file.isFile()}">
-									<a href="/Cloud/listAll/UI?dir=${file.getFileName()}">open</a>
+									<a href="/listAll/UI?dir=${file.getFileName()}">open</a>
 								</c:if></td>
 						</tr>
 					</c:forEach>

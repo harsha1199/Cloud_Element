@@ -30,7 +30,7 @@ import com.google.gson.reflect.TypeToken;
 @RestController
 public class ListFiles {
 
-	static String path = "/Cloud_Element/";
+	static String path = "D:\\home\\site\\Cloud_Element\\";
 
 	@RequestMapping(value = "/listAll", method = RequestMethod.GET, produces = "application/json")
 	public @ResponseBody String getall(@RequestParam("dir") String dir1) {
@@ -38,6 +38,12 @@ public class ListFiles {
 		List fileList = new ArrayList<FileBean>();
 		String dirPath =path+(!dir1.isEmpty()?"/":"")+dir1;
 		File dir = new File(dirPath);
+		try {
+			if(!dir.exists())
+				dir.mkdir();
+		}catch (Exception e) {
+			return "[Directory not present]";
+		}
 		File[] files = dir.listFiles();
 		if (files != null) {
 			for (File file : files) {
@@ -86,9 +92,9 @@ public class ListFiles {
 				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));
 				stream.write(bytes);
 				stream.close();
-				return "Successfully uploaded " + file.getOriginalFilename();
+				return "[Successfully uploaded " + file.getOriginalFilename()+"]";
 			} catch (Exception e) {
-				return "Upload Failed" + e.getMessage();
+				return "[Upload Failed" + e.getMessage()+"]";
 			}
 	}
 }
